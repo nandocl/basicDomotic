@@ -21,3 +21,6 @@ npm i
 ```
 npm start
 ```
+
+## Last update
+2019
