@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/listDisp"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="mainTable">
+    <table>
+      <thead>
+        <tr>
+          <th class="nombre">{{nameAdd}}</th>        
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><ion-input [(ngModel)]="textAdd" placeholder="Descripción"></ion-input></td>       
+        </tr>
+        <tr *ngIf="nameAdd.startsWith('b')">
+          <td>
+
+            <ion-list>
+              <ion-item>
+                <ion-label>Actuador</ion-label>
+                <ion-select [(ngModel)]="chippAdd" placeholder="Seleccione" >
+                  <ion-select-option *ngFor="let item of listActuAdd" value="{{item.chip}}">{{item.text}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+
+          </td>       
+        </tr>
+      </tbody>
+    </table>
+    <ion-button (click)="agregar()" size="full" class="guardarBtn">Agregar</ion-button>
+  </div>
+
+</ion-content>

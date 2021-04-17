@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/local"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajustes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+
+    <ion-item *ngFor="let item of ajustesArray; let i = index" (click)="cambiarAjuste(i)">
+      <ion-label>{{item.text}}</ion-label>
+      <ion-checkbox mode="ios" color="primary" [(ngModel)]="item.state"></ion-checkbox>
+    </ion-item>
+
+  </div>
+</ion-content>

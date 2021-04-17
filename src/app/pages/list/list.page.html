@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/devices"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Listar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button class="deviceBoton" (click)="listSend()" size="full">Listar</ion-button>
+  <div class="mainTable">
+    <table>
+      <thead>
+        <tr>
+          <th class="nombre">Nombre</th>
+          <th class="id">Id</th>
+          <th class="add">Add</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of devices">
+          <td>{{item.name}}</td>
+          <td>{{item.chip}}</td>
+          <td *ngIf="item.add != 't'">
+            <ion-button class="btnEdit" (click)="addBtn(item)">
+              <ion-icon name="add-circle-outline"></ion-icon>
+            </ion-button>
+          </td>
+          <td *ngIf="item.add == 't'">
+            <ion-button class="btnEdit" color="success">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </ion-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>

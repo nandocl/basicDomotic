@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" (click)="home()">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+    <ion-button slot="end" (click)="logOut()">
+      Salir
+    </ion-button>
+    <ion-title>Local</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="btns">
+    <ion-button *ngFor="let item of menuList" class="btnM {{item}}" (click)="page(item)">
+      <div class="hh btnImg"><ion-icon size="large" src="assets/icons/{{item}}.svg"></ion-icon></div>
+      <div class="hh btnText">{{item}}</div>
+    </ion-button>
+  </div>
+  
+</ion-content>

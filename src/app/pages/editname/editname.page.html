@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/ch-names"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Modificar nombre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="mainTable">
+    <table>
+      <thead>
+        <tr>
+          <th class="nombre">{{name}}</th>        
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><ion-input [(ngModel)]="text"></ion-input></td>       
+        </tr>
+        <tr *ngIf="name.startsWith('b') == true">
+          <td>
+
+            <ion-list>
+              <ion-item>
+                <ion-label>Actuador</ion-label>
+                <ion-select [(ngModel)]="chipp" value="{{chipp}}" placeholder="{{selected}}" >
+                  <ion-select-option *ngFor="let item of listActu" value="{{item.chip}}">{{item.text}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+
+          </td>       
+        </tr>
+      </tbody>
+    </table>
+    <ion-button (click)="guardar()" size="full" class="guardarBtn">Guardar</ion-button>
+    <ion-button (click)="borrar()" size="full" class="guardarBtn">Borrar</ion-button>
+  </div>
+
+</ion-content>

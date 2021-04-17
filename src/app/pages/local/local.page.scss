@@ -1,0 +1,54 @@
+.btnM{
+    width: 29%;
+    height: 6.5em;
+    margin: 0.3rem;
+}
+
+.hh{
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+}
+
+.btnText{
+    padding-top: 4rem;
+}
+
+.btnImg{
+    padding-top: 1rem;
+}
+
+.btns{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.luces{
+    --background: #E30C0C;
+    --background-hover: #E30C0C;
+}
+
+.clima{
+    --background: #0C30E3;
+    --background-hover: #0C30E3;
+}
+
+.presencia{
+    --background: #B112E0;
+    --background-hover: #B112E0;
+}
+
+.cocina{
+    --background: #28CE11;
+    --background-hover: #28CE11;
+}
+
+.devices{
+    --background: #686868;
+    --background-hover: #686868;
+}
+
+.ajustes{
+    --background: #ff6600;
+    --background-hover: #ff6600;
+}

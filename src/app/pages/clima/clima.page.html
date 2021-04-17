@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/local"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    {{positions}}
+    <div class="btns">
+        <ion-button *ngFor="let item of climaArray; let i = index" class="btnM clima">
+          <div class="hh btnTemp txtSize">
+            <ion-icon class="tIco" src="assets/icons/clima/temperatura.svg"></ion-icon>
+            {{item.temp}} °C
+          </div>
+          <div class="hh btnHume">
+            <ion-icon class="hIco" src="assets/icons/clima/humedad.svg"></ion-icon>
+            {{item.hume}} %
+          </div>
+          <div class="hh btnText">
+            {{item.text}}
+          </div>
+        </ion-button>
+      </div>
+</ion-content>

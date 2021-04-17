@@ -1,0 +1,21 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+
+    <div class="form">
+        <ion-item>
+          <ion-icon class="icon" src="assets/icons/login/user.svg"></ion-icon>
+          <ion-input type="email" [(ngModel)]="user.email" placeholder="Correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon class="icon" src="assets/icons/login/key.svg"></ion-icon>
+          <ion-input type="password" [(ngModel)]="user.password" placeholder="Contraseña"></ion-input>
+        </ion-item>
+      <div class="cc">
+      <ion-button size="fill" (click)="backButton()">Cancelar</ion-button>
+      <ion-button size="fill" (click)="login()">Entrar</ion-button>
+      </div>
+      </div>
+
+</ion-content>

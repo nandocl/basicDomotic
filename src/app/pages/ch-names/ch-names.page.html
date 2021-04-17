@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/devices"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Modificar elementos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button size="full" (click)="getList()">Actualizar lista</ion-button>
+
+      <div class="mainTable">
+        <table>
+          <thead>
+            <tr>
+              <th class="nombre">Id</th>
+              <th class="text">Texto</th>
+              <th class="edit">Editar</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of nombres">
+              <td>{{item.name}}</td>
+              <td>{{item.text}}</td>
+              <td>
+                <ion-button class="btnEdit" (click)="edit(item)">
+                  <ion-icon name="create-outline"></ion-icon>
+                </ion-button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+</ion-content>

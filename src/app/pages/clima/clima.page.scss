@@ -1,0 +1,54 @@
+.btnM{
+    width: 85%;
+    height: 9.5em;
+    margin: 0.3rem;
+}
+
+.hh{
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+}
+
+.txtSize{
+    font-size: 1.5rem;
+}
+
+.btnTemp{
+    padding-top: 1.5rem;
+}
+
+.btnHume{
+    padding-top: 4.6rem;
+}
+
+.btnText{
+    padding-top: 6.6rem;
+}
+
+.btn{
+    width: 30%;
+    height: 6rem;
+    margin: 4px;
+    padding: 0;
+}
+
+.btns{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.clima{
+    --background: #0C30E3;
+    --background-hover: #0C30E3;
+}
+
+.tIco{
+    transform: scale(1.8);
+    margin-right: 0.5rem;
+}
+
+.hIco{
+    transform: scale(1.3);
+    margin-right: 0.4rem;
+}

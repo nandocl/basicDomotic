@@ -1,0 +1,42 @@
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+tr:nth-of-type(odd) { 
+    background: #eee; 
+}
+th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+}
+td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+}
+
+.mainTable{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.nombre{
+    width: 25%;
+}
+
+.text{
+    width: 55%;
+}
+
+.edit{
+    width: 20%;
+}
+
+.btnEdit{
+    width: 40px;
+    --padding-start: 0.7em;
+    --padding-end: 0.7em;
+}

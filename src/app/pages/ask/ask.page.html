@@ -1,0 +1,21 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  
+  <div class="content"> 
+    <div class="buttons">
+      <ion-button expand="full" size="large" (click)="toRemote()" class="btnM btnLocalColor">
+        <ion-icon slot="start" src="assets/icon/internet.svg" style="zoom:1.0;"></ion-icon>Remoto
+      </ion-button>
+      <ion-button [disabled]="wifiErr" expand="full" size="large" (click)="toLocal()" class="btnRemoteColor">
+        <ion-icon slot="start" src="assets/icon/local.svg" style="zoom:1.0;"></ion-icon>Local
+      </ion-button>
+    </div>
+    <div class="infoTxt">
+      <div>Conexión Wifi <ion-icon src="assets/icons/ask/{{wifi}}.svg"></ion-icon></div>
+      <div>Servidor local <ion-icon src="assets/icons/ask/{{local}}.svg"></ion-icon></div>
+    </div>
+  </div>
+  <!-- <ion-button [routerLink]="['/menu']">Menu</ion-button> -->
+</ion-content>

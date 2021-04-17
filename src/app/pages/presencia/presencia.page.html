@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/local"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Presencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="btns">
+    <ion-button *ngFor="let item of movArray; let i = index" class="btnM mov" (click)="mov({state:item.state, name:item.name , position: i})">
+      <div class="hh btnImg"><ion-icon size="large" src="assets/icons/presencia/{{item.state}}.svg"></ion-icon></div>
+      <div class="hh btnText">{{item.text}}</div>
+    </ion-button>
+  </div>
+</ion-content>
